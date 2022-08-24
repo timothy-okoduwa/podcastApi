@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "webcasts",
+  "info": {
+    "name": "webcast",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "embeded": {
+      "type": "richtext",
+      "required": true,
+      "unique": false
+    },
+    "authorname": {
+      "type": "string",
+      "required": false
+    },
+    "aboutauthor": {
+      "type": "text"
+    },
+    "authorhandle": {
+      "type": "richtext"
+    },
+    "bannerimage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "videos",
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
